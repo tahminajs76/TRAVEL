@@ -336,6 +336,120 @@ button {
   height: auto;
 }
 
+/* comments */
+
+.comments__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 32px;
+}
+
+.comments__title {
+  color: #4e4b66;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 50px;
+  letter-spacing: 1px;
+  padding-bottom: 16px;
+  position: relative;
+  max-width: 45%;
+}
+.comments__title::after {
+  position: absolute;
+  content: "TESTIMONIALS";
+  color: #bca4ff;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.75px;
+  left: 0;
+  top: -40px;
+}
+
+.comments__buttons {
+  display: flex;
+  gap: 32px;
+}
+
+.comments__buttons div {
+  width: 77px;
+  height: 77px;
+  cursor: pointer;
+}
+
+.comments__buttons div img {
+  width: 100%;
+  height: 100%;
+}
+
+.comments__cards {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.comments__cards .card {
+  border-radius: 20px;
+  border: 1px solid #e4daff;
+  padding: 42px 33px;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.comments__cards .card .card__img {
+  position: absolute;
+  top: -61px;
+  width: 121px;
+  height: 121px;
+  background: #cdccff;
+  border-radius: 50%;
+}
+
+.comments__cards .card .card__img img {
+  width: 100%;
+  height: 100%;
+}
+
+.card__name {
+  color: #5f2eea;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.75px;
+  margin: 0;
+  margin-top: 32px;
+}
+
+.comments__cards .card .card__place {
+  color: #5f2eea;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.75px;
+  margin: 0;
+  margin-bottom: 22px;
+}
+
+.comments__cards .card .card__texts {
+  border-top: 1px solid #e4daff;
+  color: #4e4b66;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.8;
+  letter-spacing: 0.75px;
+  padding-top: 21px;
+}
+
 @media screen and (max-width: 1300px) {
   .container {
     padding-left: 30px;
@@ -398,6 +512,11 @@ button {
 
   .places__texts {
     max-width: 40%;
+  }
+
+  .comments__title {
+    font-size: 36px;
+    line-height: 1.2;
   }
 }
 
@@ -465,6 +584,32 @@ button {
   .places__texts {
     max-width: 100%;
   }
+
+  .comments__content {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .comments__title {
+    max-width: 100%;
+    margin-bottom: 0;
+  }
+
+  .comments__buttons {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 32px;
+    gap: 64px;
+  }
+
+  .comments__cards {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 80px;
+  }
+
+  .comments__cards .card {
+    padding: 36px 15px;
+  }
 }
 
 @media screen and (max-width: 770px) {
@@ -504,6 +649,20 @@ button {
   .places__imgs {
     grid-template-columns: 1fr;
   }
+
+  .comments__cards {
+    grid-template-columns: 1fr;
+  }
+
+  .comments__cards .card {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .comments__cards .card .card__texts {
+    width: 90%;
+    margin: 0 auto;
+  }
 }
 
 @media screen and (max-width: 550px) {
@@ -518,6 +677,10 @@ button {
 
   .card__number {
     font-size: 32px;
+  }
+
+  .comments__buttons {
+    display: none;
   }
 }
 
@@ -566,6 +729,20 @@ button {
   .places__title {
     font-size: 29px;
   }
+
+  .comments__cards .card {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .comments__cards .card .card__texts {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .comments__title {
+    font-size: 29px;
+  }
 }
 
 @media screen and (max-width: 320px) {
@@ -576,8 +753,7 @@ button {
   .header-title {
     width: 25px;
   }
-}
-@media screen and (max-width: 320px) {
+
   .hero__title {
     font-size: 28px;
     line-height: 35px;
