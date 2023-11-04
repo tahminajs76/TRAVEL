@@ -277,6 +277,65 @@ button {
   border: 2px solid #5f2eea;
 }
 
+/* PLACES */
+
+.places__container {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.places__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 32px;
+}
+
+.places__title {
+  color: #4e4b66;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 50px;
+  letter-spacing: 1px;
+  padding-bottom: 16px;
+  position: relative;
+  max-width: 45%;
+}
+.places__title::after {
+  position: absolute;
+  content: "PHOTO GALLERY";
+  color: #bca4ff;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.75px;
+  left: 0;
+  top: -40px;
+}
+
+.places__texts {
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0.75px;
+  max-width: 35%;
+}
+
+.places__imgs {
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.places__imgs img {
+  width: 100%;
+  height: auto;
+}
+
 @media screen and (max-width: 1300px) {
   .container {
     padding-left: 30px;
@@ -332,6 +391,14 @@ button {
     font-size: 14px;
     line-height: 1.5;
   }
+  .places__title {
+    font-size: 36px;
+    line-height: 1.2;
+  }
+
+  .places__texts {
+    max-width: 40%;
+  }
 }
 
 @media screen and (max-width: 1000px) {
@@ -384,6 +451,20 @@ button {
   .tool__cards {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .places__content {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .places__title {
+    max-width: 100%;
+    margin-bottom: 0;
+  }
+
+  .places__texts {
+    max-width: 100%;
+  }
 }
 
 @media screen and (max-width: 770px) {
@@ -418,6 +499,10 @@ button {
   .tools__card {
     max-width: 90%;
     margin: 0 auto;
+  }
+
+  .places__imgs {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -477,6 +562,10 @@ button {
   .tool__title {
     font-size: 29px;
   }
+
+  .places__title {
+    font-size: 29px;
+  }
 }
 
 @media screen and (max-width: 320px) {
@@ -496,7 +585,7 @@ button {
 
   .left-btn,
   .right-btn {
-    width: 90px;
+    width: 90%;
     border-radius: 45px;
     padding: 18px 26px;
     margin: 0 auto;
